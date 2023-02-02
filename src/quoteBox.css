@@ -1,0 +1,129 @@
+:root {
+    --primary-color: #006d77;
+    --secondary-color: aliceblue;
+    --last-color: aliceblue;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    background-color: var(--primary-color);
+}
+
+#quote-box {
+    position: absolute;
+    min-width: 500px;
+    max-width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2.5rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    animation: shadow-flickering 2s linear 2s infinite alternate;
+    background-color: var(--secondary-color);
+}
+
+#text {
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+#author {
+    font-size: 1.3rem;
+    text-align: right;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+}
+
+.container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#new-quote {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.fa-square-twitter {
+    color: var(--primary-color);
+}
+
+.fa-quote-left, .fa-quote-right {
+    animation: appear-disappear 2s linear 2s infinite alternate-reverse;
+}
+
+.background-color-animation {
+    animation: background-color-transition 1.5s linear 0s 1;
+}
+
+.tweet-btn-color-animation {
+    animation: tweet-btn-color-transition 1.5s linear 0s 1;
+}
+
+.new-quote-color-animation {
+    animation: new-quote-color-transition 1.5s linear 0s 1;
+}
+
+@keyframes appear-disappear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 70%;
+    }
+}
+
+@keyframes shadow-flickering {
+    0% {
+        box-shadow: none;
+    }
+    100% {
+        box-shadow: inset 0 0 20px 15px var(--primary-color);
+    }
+}
+
+@keyframes background-color-transition {
+    0% {
+        background-color: var(--last-color);
+    }
+    100% {
+        background-color: var(--primary-color);
+    }
+}
+
+@keyframes tweet-btn-color-transition {
+    0% {
+        color: var(--last-color);
+    }
+    100% {
+        color: var(--primary-color);
+    }
+}
+
+@keyframes new-quote-color-transition {
+    0% {
+        background-color: var(--last-color);
+        border-color: var(--last-color);
+    }
+    100% {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+}
