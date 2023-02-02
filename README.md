@@ -1,6 +1,6 @@
 # Preview:
 
-![Quote-Machine.png](Quote-Machine.png)
+<img alt="Quote-Machine.png" height="270" src="Quote-Machine.png" width="410"/>
 
 # Try it here:
 https://8h0wjb.csb.app/
