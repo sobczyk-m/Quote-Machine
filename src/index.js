@@ -5,7 +5,7 @@ import QuoteBox from './QuoteBox';
 
 const quoteBox = ReactDOM.createRoot(document.getElementById('quote-box'));
 quoteBox.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <QuoteBox />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
